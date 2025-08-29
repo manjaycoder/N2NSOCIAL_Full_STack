@@ -20,7 +20,7 @@ const links = [
     ),
   },
   {
-    to: '/user-search',
+    to: '/search',
     label: 'Search',
     icon: (
       <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -30,7 +30,7 @@ const links = [
     ),
   },
   {
-    to: '/create-post',
+    to: '/create',
     label: 'Create',
     icon: (
       <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
