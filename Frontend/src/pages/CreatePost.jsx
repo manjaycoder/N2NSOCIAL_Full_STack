@@ -28,7 +28,7 @@ if (mentions) {
       setLoading(true);
       setMessage("");
 
-      const res = await fetch("http://localhost:3000/posts/", {
+      const res = await fetch("https://n2nsocial-full-stack.onrender.com//posts/", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`, // token from login

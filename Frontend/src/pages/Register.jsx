@@ -31,7 +31,7 @@ export default function Register() {
     setError("");
 
     try {
-      const res = await axios.post("http://localhost:3000/auth/register", {
+      const res = await axios.post("https://n2nsocial-full-stack.onrender.com//auth/register", {
         username: form.username,
         email: form.email,
         password: form.password,

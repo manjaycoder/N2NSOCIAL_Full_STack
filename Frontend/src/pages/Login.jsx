@@ -18,7 +18,7 @@ export default function Login() {
 
     try {
       const res = await axios.post(
-        "http://localhost:3000/auth/login",
+        "https://n2nsocial-full-stack.onrender.com//auth/login",
         form,
         { withCredentials: true } // important for cookies
       );

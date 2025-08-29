@@ -50,7 +50,7 @@ export default function Home() {
   useEffect(() => {
     async function fetchPosts() {
       try {
-        const res = await axios.get("http://localhost:3000/posts/", {
+        const res = await axios.get("https://n2nsocial-full-stack.onrender.com//posts/", {
           withCredentials: true, // send cookies (JWT)
           params: { skip: 0, limit: 10 },
         });
