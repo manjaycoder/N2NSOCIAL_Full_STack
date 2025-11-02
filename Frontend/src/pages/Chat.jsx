@@ -17,7 +17,7 @@ export default function Chat() {
     async function fetchChatHistory() {
       try {
         const res = await axios.get(
-          `https://n2nsocial-full-stack.onrender.com//chat/chat-history/${user1}/${user2}?limit=20&skip=0`,
+          `https://n2nsocial-full-stack-1.onrender.com/chat/chat-history/${user1}/${user2}?limit=20&skip=0`,
           { withCredentials: true } // send cookies
         );
         setMessages(res.data.chatHistory.reverse()); // oldest → newest
@@ -31,7 +31,7 @@ export default function Chat() {
     fetchChatHistory();
 
     // 2. Connect to socket
-    const newSocket = io("https://n2nsocial-full-stack.onrender.com/", {
+    const newSocket = io("https://n2nsocial-full-stack-1.onrender.com/", {
       withCredentials: true,
     });
     setSocket(newSocket);

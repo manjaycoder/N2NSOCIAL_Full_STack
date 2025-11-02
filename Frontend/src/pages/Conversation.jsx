@@ -8,7 +8,7 @@ export default function Conversation({ user1, user2 }) {
     async function fetchChat() {
       try {
         const res = await fetch(
-          `https://n2nsocial-full-stack.onrender.com//chat/chat-history/${user1}/${user2}?limit=20&skip=0`
+          `https://n2nsocial-full-stack-1.onrender.com/chat/chat-history/${user1}/${user2}?limit=20&skip=0`
         );
         const data = await res.json();
         setMessages(data.chatHistory || []);
