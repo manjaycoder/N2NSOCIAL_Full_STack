@@ -12,7 +12,7 @@ export default function UserSearch() {
     setLoading(true)
     setError("")
     try {
-      const res = await axios.get(`https://n2nsocial-full-stack.onrender.com//api/users/search?query=${query}`)
+      const res = await axios.get(`https://n2nsocial-full-stack-1.onrender.com/api/users/search?query=${query}`)
       setResults(res.data.users || [])
     } catch (err) {
       setError("Failed to fetch users. Try again.")

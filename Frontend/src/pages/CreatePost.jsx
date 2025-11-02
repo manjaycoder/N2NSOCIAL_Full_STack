@@ -18,23 +18,25 @@ export default function CreatePost() {
     }
 
     const formData = new FormData();
-formData.append("file", file); // 👈 backend expects "file"
-if (mentions) {
-  formData.append("mentions", mentions); // don't split, backend should parse
-}
-
+    formData.append("file", file); // 👈 backend expects "file"
+    if (mentions) {
+      formData.append("mentions", mentions); // don't split, backend should parse
+    }
 
     try {
       setLoading(true);
       setMessage("");
 
-      const res = await fetch("https://n2nsocial-full-stack.onrender.com//posts/", {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${token}`, // token from login
-        },
-        withCredentials: true, 
-      });
+      const res = await fetch(
+        "https://n2nsocial-full-stack-1.onrender.com/posts/",
+        {
+          method: "POST",
+          headers: {
+            Authorization: `Bearer ${token}`, // token from login
+          },
+          withCredentials: true,
+        }
+      );
 
       const data = await res.json();
       if (res.ok) {
