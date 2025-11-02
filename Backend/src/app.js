@@ -9,7 +9,7 @@ const app = express()
 app.use(express.json())
 app.use(cookieParser())
 app.use(cors({
-  origin: "http://localhost:5173", // frontend
+  origin: "https://n2nsocial-full-stack-1.onrender.com", // frontend
   credentials: true, // if you use cookies
 }));
 
